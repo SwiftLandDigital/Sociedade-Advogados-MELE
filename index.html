@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO Meta Tags -->
+        <title>Sociedade Advogados MELE | Advocacia Especializada</title>
+        <meta
+            name="description"
+            content="Escritório de advocacia de Sociedade Advogados MELE. Defendendo seus direitos com seriedade, ética e compromisso. Entre em contato."
+        />
+        <meta
+            name="keywords"
+            content="advogado, advocacia, direito de família, direito civil, escritório de advocacia"
+        />
+        <meta property="og:image" content="https://www.mele.adv.br/imagens/mele.logo.com.fundo.png" />
+        <!-- @og_image -->
+        <meta property="og:type" content="website" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Ícones (Font Awesome) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/hero-section.css" />
+        <link rel="stylesheet" href="css/sobre-zig-zag.css" />
+        <link rel="stylesheet" href="css/servicos.css" />
+        <link rel="stylesheet" href="css/curiosidades.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+    </head>
+    <body>
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <header class="header">
+                    <div class="container">
+                        <a href="#hero-section" class="logo" data-page="hero-section">
+                            <img src="imagens/logo.mele.oficial.png" alt="Sociedade de Advogados MELE" />
+                        </a>
+                        <button class="menu-toggle" id="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <nav class="main-nav">
+                            <ul>
+                                <li><a data-page="hero-section" class="active">Home</a></li>
+                                <li><a data-page="sobre-o-escritorio">Sobre</a></li>
+                                <li><a data-page="areas-de-atuacao">Serviços</a></li>
+                                <!-- Este link "Contato" será visível apenas no menu mobile -->
+                                <li class="mobile-nav-contact-link"><a data-page="contato-section">Contato</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+
+                <main>
+                    <!-- A seção Hero agora tem um ID para ser o target do link "Home" -->
+                    <section id="hero-section" class="hero">
+                        <div class="hero-content">
+                            <h1 data-aos="">Sociedade Advogados MELE</h1>
+                            <p data-aos="" class="subtitle">
+                                Atuando na área jurídica contenciosa/preventiva desde 1984, com foco em direito
+                                trabalhista e cível em São Paulo
+                            </p>
+                            <div class="container-btn-whatsapp" data-aos="">
+                                <a
+                                    href="https://api.whatsapp.com/send/?phone=5511988756001&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site,%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es"
+                                    class="btn btn-whatsapp"
+                                    target="_blank"
+                                >
+                                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A seção Sobre agora tem seu próprio ID -->
+                    <section id="sobre-o-escritorio" class="section-padding">
+                        <div class="container">
+                            <div class="page-header" data-aos="">
+                                <h2>Sobre o Escritório</h2>
+                                <p>Atuamos na área trabalhista, de forma contenciosa e preventiva, desde 1984.</p>
+                            </div>
+
+                            <!-- Advogado 1: Esquerda -->
+                            <div class="about-grid" data-aos="">
+                                <div class="container-img">
+                                    <img src="imagens/dr.victor.png" alt="Foto profissional do Dr. Victor Leite Mele" />
+                                </div>
+                                <div class="container-text">
+                                    <div class="wrapper-text">
+                                        <h3>Dr. Victor Leite Mele</h3>
+                                    </div>
+                                    <p>
+                                        Inscrito na OAB/SP nº 380.192. Formado pela Faculdade FMU em 2015, possui sólida
+                                        trajetória acadêmica e profissional. É pós-graduado em Direito do Trabalho e
+                                        Processo do Trabalho pela PUC-SP (COGEAE), título obtido em 2019, o que reforça
+                                        sua especialização na área trabalhista.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Advogado 2: Direita (zigzag) -->
+                            <div class="about-grid" data-aos="">
+                                <div class="container-img">
+                                    <img
+                                        src="imagens/dr.wanor.oficial.png"
+                                        alt="Foto profissional do Dr. Wanor Moreno Mele"
+                                    />
+                                </div>
+                                <div class="container-text">
+                                    <div class="wrapper-text">
+                                        <h3>Dr. Wanor Moreno Mele</h3>
+                                    </div>
+                                    <p>
+                                        Advogado inscrito na OAB/SP nº 83.339, com mais de 30 anos de experiência em
+                                        Direito do Trabalho, atuando de forma preventiva e contenciosa. Também possui
+                                        sólida atuação em Direito Empresarial e em outros ramos jurídicos, oferecendo
+                                        soluções estratégicas e eficazes para seus clientes.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Advogado 3: Esquerda -->
+                            <div class="about-grid" data-aos="">
+                                <div class="container-img">
+                                    <img
+                                        src="imagens/dra.anacarolina.leite.versolato.png"
+                                        alt="Foto profissional da Dra. Ana Carolina Leite Versolato"
+                                    />
+                                </div>
+                                <div class="container-text">
+                                    <div class="wrapper-text">
+                                        <h3>Dra. Ana Carolina Leite Versolato</h3>
+                                    </div>
+                                    <p>
+                                        Advogada, inscrita na OAB/SP 402.878, formada pela FMU em 2016, Especialista em
+                                        Direito do Trabalho e Direito do Consumidor pelo Faculdade Legale em 2023.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Advogado 4: Direita (zigzag) -->
+                            <div class="about-grid" data-aos="">
+                                <div class="container-img">
+                                    <img
+                                        src="imagens/dra.luana.maria.aparecida.lima.png"
+                                        alt="Foto profissional da Dra. Luana Maria Aparecida Lima"
+                                    />
+                                </div>
+                                <div class="container-text">
+                                    <div class="wrapper-text">
+                                        <h3>Dra. Luana Maria Aparecida Lima</h3>
+                                    </div>
+                                    <p>
+                                        Advogada, inscrita na OAB/SP nº 468.681. Formada pela Faculdade FMU em 2017; Pós
+                                        graduada em Direito do Trabalho e Processo do Trabalho em 2020. Cursando Pós
+                                        graduação em Direito Tributário.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A seção de Serviços agora tem seu próprio ID -->
+                    <section id="areas-de-atuacao" class="section-padding" style="background-color: #f9f9f9">
+                        <div class="container">
+                            <div class="page-header aos" data-aos="">
+                                <h2>Áreas de Atuação</h2>
+                                <p>
+                                    Nossas especialidades abrangem diversas áreas do direito para melhor atender suas
+                                    necessidades.
+                                </p>
+                            </div>
+                            <div class="services-grid">
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-scale-balanced"></i>
+                                    <h3>Direito Cível</h3>
+                                    <p>
+                                        Atuação ampla em demandas cíveis, como responsabilidade civil, indenizações,
+                                        obrigações, direitos da personalidade, cobranças, conflitos entre particulares e
+                                        mediação de conflitos patrimoniais e existenciais.
+                                    </p>
+                                </div>
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-people-arrows"></i>
+                                    <h3>Direito de Família</h3>
+                                    <p>
+                                        Cuidamos de casos que envolvem relações familiares com sensibilidade, técnica e
+                                        estratégia. Atuação em divórcios, guarda de filhos, pensão alimentícia,
+                                        partilhas, uniões estáveis, adoções e ações de proteção à mulher com base na Lei
+                                        Maria da Penha.
+                                    </p>
+                                </div>
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-scale-balanced"></i>
+                                    <h3>Direito Previdenciário</h3>
+                                    <p>
+                                        Assessoria e defesa em questões relacionadas a benefícios previdenciários, como
+                                        aposentadoria (por idade, tempo de contribuição, especial), pensão por morte,
+                                        auxílio-doença, BPC/LOAS e revisão de benefícios.
+                                    </p>
+                                </div>
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-users-gear"></i>
+                                    <h3>Direito Trabalhista</h3>
+                                    <p>
+                                        Defesa dos direitos de empregadores e empregados em ações trabalhistas, acordos,
+                                        rescisões, assédio, equiparação salarial e prevenção de litígios. Consultoria
+                                        estratégica para empresas e representação em audiências e julgamentos.
+                                    </p>
+                                </div>
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-house"></i>
+                                    <h3>Direito Imobiliário</h3>
+                                    <p>
+                                        Segurança jurídica para negócios com imóveis. Atuamos em contratos de compra e
+                                        venda, locações, usucapião, regularização de imóveis, ações possessórias e
+                                        consultoria para empreendimentos imobiliários.
+                                    </p>
+                                </div>
+                                <div class="service-card" data-aos="">
+                                    <i class="fas fa-cart-shopping"></i>
+                                    <h3>Direito do Consumidor</h3>
+                                    <p>
+                                        Defesa dos direitos dos consumidores em casos de produtos defeituosos, cobranças
+                                        indevidas, publicidade enganosa, práticas abusivas e outras questões que afetam
+                                        a relação de consumo, buscando indenizações e reparação de danos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br /><br />
+                        <!-- FAQ / Accordion -->
+                        <section id="faq" class="section-padding" style="background: #f6f6f6">
+                            <div class="container">
+                                <header
+                                    class="page-header aos"
+                                    style="text-align: center; margin-bottom: 28px"
+                                    data-aos=""
+                                >
+                                    <h2>Dúvidas Trabalhistas</h2>
+                                    <p>Tire suas dúvidas sobre as principais questões do direito do trabalho.</p>
+                                </header>
+
+                                <div class="vk-accordion" role="region" aria-label="Dúvidas Trabalhistas">
+                                    <!-- item -->
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq1"
+                                            id="t-faq1"
+                                        >
+                                            Quais são meus direitos ao ser demitido sem justa causa?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq1" role="region" aria-labelledby="t-faq1">
+                                            <p>
+                                                Na demissão sem justa causa, o trabalhador tem direito a receber o saldo
+                                                de salário dos dias trabalhados no mês, aviso prévio (trabalhado ou
+                                                indenizado), férias vencidas e proporcionais com acréscimo de 1/3, e 13º
+                                                salário proporcional. [5, 9, 23] Além disso, tem o direito de sacar o
+                                                valor total do FGTS depositado pela empresa, acrescido de uma multa de
+                                                40% sobre esse valor. [5, 9] Dependendo do tempo de serviço, também
+                                                poderá solicitar o seguro-desemprego. [5, 9]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq2"
+                                            id="t-faq2"
+                                        >
+                                            Tenho direito a horas extras? Como elas devem ser pagas?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq2" role="region" aria-labelledby="t-faq2">
+                                            <p>
+                                                Sim, todo trabalho que exceda a jornada regular (geralmente de 8 horas
+                                                diárias e 44 semanais) é considerado hora extra. [19] O pagamento deve
+                                                ser feito com um acréscimo de, no mínimo, 50% sobre o valor da hora
+                                                normal para dias de semana. [16, 46, 47] Para horas extras realizadas em
+                                                domingos e feriados, o adicional é de 100%. [46] A lei permite um máximo
+                                                de 2 horas extras por dia. [19]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq3"
+                                            id="t-faq3"
+                                        >
+                                            O que fazer se sofrer assédio moral ou importunação no trabalho?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq3" role="region" aria-labelledby="t-faq3">
+                                            <p>
+                                                Se você for vítima de assédio moral, é importante documentar todas as
+                                                situações, anotando datas, horários, nomes de testemunhas e o que
+                                                aconteceu. [10] Grave conversas, se possível, e guarde e-mails ou
+                                                mensagens que comprovem a humilhação. [10] Você pode relatar o ocorrido
+                                                ao setor de Recursos Humanos (RH), à Ouvidoria da empresa ou à CIPA
+                                                (Comissão Interna de Prevenção de Acidentes). [10, 22] Buscar apoio
+                                                jurídico especializado também é fundamental para orientação sobre como
+                                                proceder, seja para uma mediação ou para uma ação judicial. [10]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq4"
+                                            id="t-faq4"
+                                        >
+                                            Como funciona a rescisão indireta e quando posso pedir?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq4" role="region" aria-labelledby="t-faq4">
+                                            <p>
+                                                A rescisão indireta é como uma "justa causa" do empregado contra o
+                                                empregador. [12, 25] Ela pode ser solicitada quando a empresa comete uma
+                                                falta grave que torna a continuidade do trabalho insustentável. [25, 29]
+                                                Os principais motivos incluem atraso frequente de salários, não
+                                                recolhimento do FGTS, assédio moral, exigência de atividades ilegais ou
+                                                condições de trabalho perigosas. [7, 12, 25] Ao ter a rescisão indireta
+                                                reconhecida pela Justiça, o trabalhador tem direito a todas as verbas
+                                                rescisórias de uma demissão sem justa causa. [2]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq5"
+                                            id="t-faq5"
+                                        >
+                                            O que é a estabilidade acidentária e quem tem direito a ela?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq5" role="region" aria-labelledby="t-faq5">
+                                            <p>
+                                                A estabilidade acidentária é o direito do trabalhador de manter seu
+                                                emprego por, no mínimo, 12 meses após o retorno de um afastamento por
+                                                acidente de trabalho ou doença ocupacional. [11, 24, 34, 38] Para ter
+                                                direito, é preciso que o afastamento tenha sido superior a 15 dias e que
+                                                o trabalhador tenha recebido o auxílio-doença acidentário do INSS. [11,
+                                                24] Durante esse período, o empregado não pode ser demitido sem justa
+                                                causa. [34]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq6"
+                                            id="t-faq6"
+                                        >
+                                            Tenho direito a intervalo durante a jornada de trabalho?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq6" role="region" aria-labelledby="t-faq6">
+                                            <p>
+                                                Sim, o intervalo é um direito. Para jornadas de trabalho que ultrapassam
+                                                6 horas diárias, o intervalo para repouso e alimentação deve ser de, no
+                                                mínimo, 1 hora e no máximo 2 horas. [19, 40] Em jornadas de 4 a 6 horas,
+                                                o intervalo é de 15 minutos. [19, 40] Se a empresa não conceder o
+                                                intervalo corretamente, o tempo suprimido deve ser pago como hora extra.
+                                                [28]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq7"
+                                            id="t-faq7"
+                                        >
+                                            Quais são os primeiros passos que devo tomar após sofrer um acidente de
+                                            trabalho?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq7" role="region" aria-labelledby="t-faq7">
+                                            <p>
+                                                O primeiro passo é procurar atendimento médico imediato, seja no local
+                                                ou sendo encaminhado a um hospital. [4, 8, 30] É fundamental comunicar o
+                                                acidente à empresa o mais rápido possível, que por sua vez deve emitir a
+                                                Comunicação de Acidente de Trabalho (CAT). [4, 8] Se possível, registre
+                                                o local do acidente com fotos ou vídeos e guarde todos os documentos
+                                                médicos, como atestados e laudos, pois eles serão essenciais para
+                                                comprovar o ocorrido e garantir seus direitos. [30]
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="vk-acc-item">
+                                        <button
+                                            class="vk-acc-trigger"
+                                            aria-expanded="false"
+                                            aria-controls="faq8"
+                                            id="t-faq8"
+                                        >
+                                            Tenho direito ao adicional de insalubridade?
+                                            <span class="vk-acc-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <div class="vk-acc-panel" id="faq8" role="region" aria-labelledby="t-faq8">
+                                            <p>
+                                                Têm direito ao adicional de insalubridade os trabalhadores expostos a
+                                                agentes nocivos à saúde, como ruído excessivo, calor, produtos químicos
+                                                ou agentes biológicos, acima dos limites de tolerância previstos na
+                                                Norma Regulamentadora nº 15 (NR-15). [1, 18] O direito e o grau da
+                                                insalubridade (mínimo, médio ou máximo) são confirmados por meio de uma
+                                                perícia técnica no local de trabalho. [1] O valor do adicional é de 10%,
+                                                20% ou 40% sobre o salário mínimo, dependendo do grau. [18]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <script>
+                            /* Accordion – comportamento (1 aberto por vez, teclado e ARIA ok) */
+                            (function () {
+                                const items = document.querySelectorAll(".vk-acc-item");
+                                const closeAll = () =>
+                                    items.forEach((i) => {
+                                        const btn = i.querySelector(".vk-acc-trigger");
+                                        const panel = i.querySelector(".vk-acc-panel");
+                                        btn.setAttribute("aria-expanded", "false");
+                                        panel.style.maxHeight = 0;
+                                    });
+
+                                items.forEach((item) => {
+                                    const btn = item.querySelector(".vk-acc-trigger");
+                                    const panel = item.querySelector(".vk-acc-panel");
+
+                                    btn.addEventListener("click", () => {
+                                        const expanded = btn.getAttribute("aria-expanded") === "true";
+                                        closeAll();
+                                        if (!expanded) {
+                                            btn.setAttribute("aria-expanded", "true");
+                                            panel.style.maxHeight = panel.scrollHeight + "px";
+                                        }
+                                    });
+
+                                    // abrir por hash (ex.: #faq2)
+                                    if (location.hash && item.querySelector(location.hash)) {
+                                        setTimeout(() => btn.click(), 0);
+                                    }
+                                });
+
+                                // recalcula altura ao redimensionar
+                                window.addEventListener("resize", () => {
+                                    document.querySelectorAll('.vk-acc-trigger[aria-expanded="true"]').forEach((t) => {
+                                        const p = t.nextElementSibling;
+                                        p.style.maxHeight = p.scrollHeight + "px";
+                                    });
+                                });
+                            })();
+                        </script>
+                        <br />
+                        <br />
+                        <h3 style="text-align: center">Veja uma estimativa dos seus direitos trabalhistas.</h3>
+                        <div id="calc-trabalhista" class="ct-card">
+                            <div class="ct-header">
+                                <h3>Calculadora Trabalhista</h3>
+                                <p>Preencha os campos para estimar sua rescisão</p>
+                            </div>
+                            <div class="ct-body">
+                                <label class="ct-label">Salário Mensal (R$)</label>
+                                <div class="ct-input">
+                                    <span class="ct-icon"></span>
+                                    <input type="number" id="salario_home" placeholder="Ex: 2500" inputmode="decimal" />
+                                </div>
+                                <label class="ct-label">Meses trabalhados no ano</label>
+                                <div class="ct-input">
+                                    <span class="ct-icon"></span>
+                                    <input
+                                        type="number"
+                                        id="meses_home"
+                                        placeholder="Ex: 6"
+                                        inputmode="numeric"
+                                        min="0"
+                                        max="12"
+                                    />
+                                </div>
+                                <label class="ct-label">Saldo FGTS acumulado (R$)</label>
+                                <div class="ct-input">
+                                    <span class="ct-icon"></span>
+                                    <input type="number" id="fgts_home" placeholder="Ex: 5000" inputmode="decimal" />
+                                </div>
+                                <div class="ct-actions">
+                                    <button class="ct-btn ct-primary" onclick="calcularRescisao('home')">
+                                        Calcular
+                                    </button>
+                                    <button class="ct-btn ct-ghost" onclick="limparCalc('home')">Limpar</button>
+                                </div>
+                                <div id="resultado_home" class="ct-result is-empty">
+                                    <div class="ct-placeholder">
+                                        Insira os dados e clique em <strong>Calcular</strong>.
+                                    </div>
+                                </div>
+                                <p class="ct-note">
+                                    ⚠️ Este cálculo é uma estimativa. Fale com um advogado para uma análise individual
+                                    do seu caso.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A seção de Curiosidades agora tem seu próprio ID -->
+                    <section id="curiosidades-juridicas" class="section-padding">
+                        <div class="container">
+                            <div class="page-header aos" data-aos="">
+                                <h2>Curiosidades Jurídicas</h2>
+                                <p>
+                                    Com um advogado trabalhista experiente, o trabalhador tem a segurança de ver seus
+                                    direitos defendidos e maiores chances de receber os valores devidos.
+                                </p>
+                            </div>
+                            <div class="curiosities-container">
+                                <div class="curiosity-block" data-aos="">
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="imagens/curiosidade.trabalhadora.doméstica.png"
+                                            alt="Direitos da trabalhadora doméstica"
+                                        />
+                                    </div>
+                                    <div class="text-content">
+                                        <h3>
+                                            Você é trabalhadora doméstica? Descubra agora quais são os seus direitos
+                                            garantidos por lei.
+                                        </h3>
+                                        <p>
+                                            Os trabalhadores domésticos têm direitos fundamentais que asseguram
+                                            equilíbrio e dignidade na relação de trabalho. Entre eles estão: jornada de
+                                            até 8 horas diárias e 44 semanais, pagamento de horas extras com adicional
+                                            de 50%, férias anuais de 30 dias acrescidas de um terço, 13º salário, FGTS
+                                            obrigatório e aviso prévio de 30 dias em caso de demissão.
+                                        </p>
+                                        <p>
+                                            Além disso, contam com seguro-desemprego de até 3 meses, direito ao salário
+                                            mínimo, adicional noturno para atividades entre 22h e 5h e o respeito à sua
+                                            privacidade, garantindo condições de trabalho justas e saudáveis.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="curiosity-block" data-aos="">
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="imagens/curiosidade.verbasnaopagas.png"
+                                            alt="Verbas trabalhistas não pagas"
+                                        />
+                                    </div>
+                                    <div class="text-content">
+                                        <h3>Foi dispensado e não recebeu as verbas trabalhistas devidas?</h3>
+                                        <p>
+                                            Com o apoio de uma advogada trabalhista, o trabalhador pode assegurar todas
+                                            as verbas rescisórias devidas, como salário, férias, 13º, aviso prévio e
+                                            multa do FGTS, além de identificar e corrigir possíveis irregularidades,
+                                            como a omissão de horas extras e adicionais.
+                                        </p>
+                                        <p>
+                                            Além disso, é possível requerer multas previstas em lei e até indenizações
+                                            por assédio ou outras violações de direitos. A advogada garante defesa
+                                            técnica completa em todas as fases do processo, apresentando provas e
+                                            aumentando as chances de êxito na ação.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="curiosity-block" data-aos="">
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="imagens/curiosidade.rescisao.indireta.png"
+                                            alt="Rescisão indireta - Justa causa do empregador"
+                                        />
+                                    </div>
+                                    <div class="text-content">
+                                        <h3>
+                                            A empresa descumpre suas obrigações? Saiba como pedir a rescisão indireta —
+                                            a justa causa do empregador.
+                                        </h3>
+                                        <p>
+                                            A rescisão indireta é a chamada “justa causa do empregador”, usada quando a
+                                            empresa comete faltas graves, como atraso de salários, assédio, exigência de
+                                            atos ilícitos, mudanças abusivas no contrato ou condições degradantes de
+                                            trabalho.
+                                        </p>
+                                        <p>
+                                            Nesses casos, o trabalhador pode encerrar o contrato sem perder direitos da
+                                            demissão sem justa causa, como aviso prévio, férias proporcionais, 13º e
+                                            multa de 40% do FGTS. Para isso, é preciso reunir provas, procurar uma
+                                            advogada trabalhista e ingressar com ação na Justiça do Trabalho, que
+                                            avaliará se há fundamento para conceder a rescisão.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A seção de Contato agora tem seu próprio ID -->
+                    <section id="contato-section" class="section-padding premium-contact">
+                        <div class="container">
+                            <div class="page-header aos" data-aos="">
+                                <h2>Entre em Contato</h2>
+                                <p>
+                                    Atendimento diligente e discreto. Fale conosco pelos canais abaixo ou visite-nos no
+                                    escritório.
+                                </p>
+                            </div>
+
+                            <div class="contact-grid">
+                                <!-- Coluna Esquerda -->
+                                <div class="contact-card">
+                                    <span class="seal"
+                                        ><i class="fas fa-shield-alt"></i> Atendimento sob agendamento</span
+                                    >
+                                    <h3>Agende sua Avaliação</h3>
+                                    <p class="contact-sub">Atuação técnica, ética e personalizada para o seu caso.</p>
+
+                                    <div class="contact-list">
+                                        <div class="contact-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <div>
+                                                <strong>Endereço</strong>
+                                                Avenida <b>Cásper</b> Líbero, nº 383, 2º andar – Conjunto C,
+                                                <b>Santa Ifigênia</b>, São Paulo/SP – CEP 01033-001
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-item">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <div>
+                                                <strong>WhatsApp</strong>
+                                                <a
+                                                    href="https://api.whatsapp.com/send/?phone=5511988756001&text=Ol%C3%A1%2C%20vim%20pelo%20site.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    >(11) 98875-6001</a
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <div>
+                                                <strong>E-mail</strong>
+                                                <a href="mailto:sociedadeadvmele@gmail.com"
+                                                    >sociedadeadvmele@gmail.com</a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-actions">
+                                        <a
+                                            class="btn btn-whats"
+                                            target="_blank"
+                                            rel="noopener"
+                                            href="https://api.whatsapp.com/send/?phone=5511988756001&text=Ol%C3%A1%2C%20vim%20pelo%20site.%20Gostaria%20de%20falar%20com%20o%20escrit%C3%B3rio."
+                                        >
+                                            <i class="fab fa-whatsapp"></i> Falar no WhatsApp agora
+                                        </a>
+                                        <a class="btn btn-outline" href="mailto:sociedadeadvmele@gmail.com">
+                                            <i class="fas fa-paper-plane"></i> Enviar e-mail
+                                        </a>
+                                    </div>
+
+                                    <div class="mini-foot">
+                                        Atendimento mediante análise individual do caso. Conteúdo informativo.
+                                    </div>
+                                </div>
+
+                                <!-- Coluna Direita: Mapa -->
+                                <div class="contact-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5505.814505347535!2d-46.63604292326004!3d-23.53817869191883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58598ca348f3%3A0x49861cf6c1593f8b!2sAv.%20C%C3%A1sper%20L%C3%ADbero%2C%20383%20-%20Centro%20Hist%C3%B3rico%20de%20S%C3%A3o%20Paulo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001033-001!5e1!3m2!1spt-BR!2sbr!4v1756499614957!5m2!1spt-BR!2sbr"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <footer class="footer">
+                    <div class="footer-contact">
+                        <img
+                            class="footer-logo"
+                            src="imagens/logo.mele.oficial.png"
+                            alt="Sociedade de Advogados MELE"
+                            style="height: 120px"
+                            data-aos=""
+                        />
+                        <div class="wrapper" style="margin-bottom: 1.5rem">
+                            <h3 data-aos="">Sociedade Advogados MELE</h3>
+                        </div>
+                        <p class="footer-address" data-aos="">
+                            Avenida Casper Líbero, nº 383, 2º andar – Conjunto C,<br />
+                            bairro Santa Efigênia, São Paulo/SP CEP: 01033-00
+                        </p>
+                        <div class="wrapper">
+                            <p class="footer-phone-whats" data-aos="">
+                                <i class="fab fa-whatsapp"></i> <a href="tel:+5511988756001">(11) 98875-6001</a>
+                            </p>
+                        </div>
+                        <div class="wrapper">
+                            <p class="footer-phone-email" data-aos="">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sociedadeadvmele@gmail.com">sociedadeadvmele@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="social-links" data-aos="">
+                        <a href="https://www.instagram.com/sociedadedeadvogadosmele/" target="_blank" title="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="https://bnisaopaulo.com.br/regiao-sao-paulo-bni-sp-visao/pt-BR/memberdetails?encryptedMemberId=BkREzNgk0zZibbkh8IV9kw%3D%3D&cmsv3=true&name=Victor+Leite+Mele"
+                            target="_blank"
+                            title="Link"
+                            ><i class="fas fa-link"></i
+                        ></a>
+                        <a
+                            href="https://calculoexato.com.br/parprima.aspx?codMenu=TrabRescisao"
+                            target="_blank"
+                            title="Calculadora"
+                            ><i class="fas fa-calculator"></i
+                        ></a>
+                    </div>
+                    <div class="footer-bottom" data-aos="">
+                        <p>Copyright &copy; 2025 | Sociedade Advogados MELE - Todos os direitos reservados.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- ===================================================================
+    ======================= INÍCIO DO JAVASCRIPT ==========================
+    ==================================================================== -->
+        <!-- <script src="./js/observer.js"></script> -->
+        <script src="./js/gsap/gsap.min.js"></script>
+        <script src="./js/gsap/ScrollTrigger.min.js"></script>
+        <script src="./js/gsap/ScrollSmoother.min.js"></script>
+        <script src="./js/main.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navLinks = document.querySelectorAll(".main-nav a, .logo");
+                // Removido `pages` e `homePage` pois não estamos mais trocando `display: block/none`
+                const menuToggle = document.getElementById("menu-toggle");
+                const mainNav = document.querySelector(".main-nav");
+
+                function navigateTo(targetId) {
+                    // Remove a classe 'active' de todos os links
+                    navLinks.forEach((link) => link.classList.remove("active"));
+
+                    // Adiciona a classe 'active' ao link clicado (ou ao link correspondente ao targetId)
+                    const activeLink = document.querySelector(`.main-nav a[data-page="${targetId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+
+                    // Rola para o elemento com o ID correspondente
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: "smooth" });
+                    }
+
+                    // Fecha o menu mobile se estiver aberto
+                    if (mainNav.classList.contains("active") && window.innerWidth <= 768) {
+                        mainNav.classList.remove("active");
+                    }
+                }
+
+                // Define o link "Home" como ativo e rola para o topo da página ao carregar
+                // ou ao clicar no logo (que agora aponta para #hero-section)
+                const homeLink = document.querySelector('.main-nav a[data-page="hero-section"]');
+                if (homeLink) {
+                    homeLink.classList.add("active");
+                }
+                // Não é necessário rolar para o topo aqui, pois o navegador já faz isso ou o hero já está visível.
+
+                if (menuToggle) {
+                    menuToggle.addEventListener("click", function () {
+                        mainNav.classList.toggle("active");
+                    });
+                }
+
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute("data-page");
+                        navigateTo(targetId);
+                    });
+                });
+
+                // O listener para o botão de contato do cabeçalho foi removido junto com o botão.
+                // const headerContactBtn = document.querySelector('.header-contact-btn');
+                // if (headerContactBtn) {
+                //     headerContactBtn.addEventListener('click', function(e) {
+                //         e.preventDefault();
+                //         const targetId = this.getAttribute('href').substring(1);
+                //         navigateTo(targetId);
+                //     });
+                // }
+
+                // Opcional: Adicionar um observador para atualizar o link ativo da navegação ao rolar
+                const sections = document.querySelectorAll("main section");
+                const observerOptions = {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.5, // Mude este valor para ajustar quando o link se torna ativo
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            navLinks.forEach((link) => link.classList.remove("active"));
+                            const currentSectionId = entry.target.id;
+                            const correspondingNavLink = document.querySelector(
+                                `.main-nav a[data-page="${currentSectionId}"]`
+                            );
+                            if (correspondingNavLink) {
+                                correspondingNavLink.classList.add("active");
+                            } else if (currentSectionId === "hero-section") {
+                                // Garante que "Home" fica ativo no topo
+                                document.querySelector('.main-nav a[data-page="hero-section"]').classList.add("active");
+                            }
+                        }
+                    });
+                }, observerOptions);
+
+                sections.forEach((section) => {
+                    observer.observe(section);
+                });
+                // Adiciona um observador especial para a seção hero no início para o link "Home"
+                const heroSection = document.getElementById("hero-section");
+                if (heroSection) {
+                    const heroObserver = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
+                                    // Mais rigoroso para "Home"
+                                    navLinks.forEach((link) => link.classList.remove("active"));
+                                    document
+                                        .querySelector('.main-nav a[data-page="hero-section"]')
+                                        .classList.add("active");
+                                }
+                            });
+                        },
+                        {
+                            root: null,
+                            rootMargin: "0px",
+                            threshold: 0.8, // Ajuste o threshold conforme necessário para o "Home"
+                        }
+                    );
+                    heroObserver.observe(heroSection);
+                }
+            });
+
+            const fmtBRL = (v) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0);
+
+            function calcularRescisao(context = "") {
+                const suffix = context ? `_${context}` : "";
+                const salario = parseFloat(document.getElementById(`salario${suffix}`).value);
+                const meses = parseInt(document.getElementById(`meses${suffix}`).value);
+                const fgts = parseFloat(document.getElementById(`fgts${suffix}`).value);
+
+                if (
+                    isNaN(salario) ||
+                    isNaN(meses) ||
+                    isNaN(fgts) ||
+                    meses < 0 ||
+                    meses > 12 ||
+                    salario < 0 ||
+                    fgts < 0
+                ) {
+                    renderErro("Verifique os campos: use números válidos e meses entre 0 e 12.", suffix);
+                    return;
+                }
+
+                const avisoPrevio = salario;
+                const decimoTerceiro = (salario / 12) * meses;
+                const feriasBase = (salario / 12) * meses;
+                const ferias = feriasBase + feriasBase / 3;
+                const multaFGTS = fgts * 0.4;
+                const total = avisoPrevio + decimoTerceiro + ferias + multaFGTS;
+
+                renderResultado({ avisoPrevio, decimoTerceiro, ferias, multaFGTS, total }, suffix);
+            }
+
+            function limparCalc(context = "") {
+                const suffix = context ? `_${context}` : "";
+                ["salario", "meses", "fgts"].forEach((id) => (document.getElementById(id + suffix).value = ""));
+                const el = document.getElementById(`resultado${suffix}`);
+                el.classList.add("is-empty");
+                el.innerHTML =
+                    '<div class="ct-placeholder">Insira os dados e clique em <strong>Calcular</strong>.</div>';
+            }
+
+            function renderResultado(v, suffix) {
+                const el = document.getElementById(`resultado${suffix}`);
+                el.classList.remove("is-empty");
+                el.innerHTML = `
+              <h4>📌 Resumo da Rescisão</h4>
+              <ul class="ct-list">
+                <li><span>Aviso Prévio</span><strong>${fmtBRL(v.avisoPrevio)}</strong></li>
+                <li><span>13º Proporcional</span><strong>${fmtBRL(v.decimoTerceiro)}</strong></li>
+                <li><span>Férias Proporcionais + 1/3</span><strong>${fmtBRL(v.ferias)}</strong></li>
+                <li><span>Multa 40% FGTS</span><strong>${fmtBRL(v.multaFGTS)}</strong></li>
+              </ul>
+              <div class="ct-total">
+                <span>💰 Total estimado</span>
+                <span>${fmtBRL(v.total)}</span>
+              </div>
+            `;
+            }
+
+            function renderErro(msg, suffix) {
+                const el = document.getElementById(`resultado${suffix}`);
+                el.classList.remove("is-empty");
+                el.innerHTML = `
+              <h4>⚠️ Atenção</h4>
+              <div style="background:#241413;border:1px solid #3a1d1b;color:#ffb4a7;padding:10px;border-radius:10px;">
+                ${msg}
+              </div>
+            `;
+            }
+
+            ["salario", "meses", "fgts"].forEach((id) => {
+                const element = document.getElementById(id);
+                if (element)
+                    element.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter") calcularRescisao();
+                    });
+
+                const elementHome = document.getElementById(`${id}_home`);
+                if (elementHome)
+                    elementHome.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter") calcularRescisao("home");
+                    });
+            });
+        </script>
+        <!-- ===================================================================
+    ========================== FIM DO JAVASCRIPT ==========================
+    ==================================================================== -->
+    </body>
+</html>

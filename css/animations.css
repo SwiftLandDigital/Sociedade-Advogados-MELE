@@ -1,0 +1,23 @@
+.page-header.aos h2 {
+    transform: scale(1.2);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.page-header.aos p {
+    transform: translateY(4rem);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.page-header.aos.animate h2 {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.page-header.aos.animate p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}

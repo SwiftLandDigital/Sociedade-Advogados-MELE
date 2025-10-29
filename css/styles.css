@@ -1,0 +1,693 @@
+/* === GERAL E VARIÁVEIS === */
+:root {
+    --primary-color: #262626;
+    --secondary-color: #333333;
+    --accent-color: #cb9531;
+    --light-gray: #f4f4f4;
+    --white-color: #ffffff;
+    --heading-font: "Playfair Display", serif;
+    --body-font: "Lato", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* scroll-behavior: smooth; */
+}
+
+#smooth-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px; /* Adiciona padding lateral para o container principal */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #ffffff; /* Padrão para parágrafos, ajuste conforme necessário */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    font-size: 2.8rem;
+}
+
+.page-header p {
+    color: var(--secondary-color);
+}
+
+/* === ACCORDION FAQ === */
+.vk-accordion {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+}
+
+.vk-acc-item {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.vk-acc-item:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border-color: #e7e7e7;
+}
+
+.vk-acc-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 18px 56px 18px 20px;
+    font: 600 1.05rem/1.3 "Poppins", system-ui, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg, #fff, #fbfbfb);
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    color: #333333;
+    text-decoration: none;
+}
+
+.vk-acc-trigger:focus {
+    outline: 3px solid #cb9531;
+    outline-offset: 2px;
+    border-radius: 14px;
+}
+
+.vk-acc-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    border: 2px solid #cb9531;
+}
+
+.vk-acc-icon:before,
+.vk-acc-icon:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background: #cb9531;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s, opacity 0.2s;
+}
+
+.vk-acc-icon:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.vk-acc-trigger[aria-expanded="true"] .vk-acc-icon:after {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+.vk-acc-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s ease, opacity 0.25s;
+    padding: 0 20px;
+    opacity: 0;
+    background: #fff;
+}
+
+.vk-acc-panel p {
+    margin: 14px 0 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.vk-acc-trigger[aria-expanded="true"] + .vk-acc-panel {
+    padding: 0 20px 18px;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vk-acc-panel {
+        transition: none;
+    }
+    .vk-acc-icon:before,
+    .vk-acc-icon:after {
+        transition: none;
+    }
+}
+
+/* === CONTACT PREMIUM (Mantido como estava, pois já é escuro) === */
+.premium-contact {
+    --bg: #0f1115;
+    --panel: #151820;
+    --panel-2: #0c0e13;
+    --text: #e8ebf2;
+    --muted: #a8b0c2;
+    --accent: #d4af37;
+    --whats: #25d366;
+    --radius: 20px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    color: var(--text);
+    padding: 64px 0;
+}
+
+.premium-contact .page-header {
+    max-width: 880px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.premium-contact .page-header h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    letter-spacing: 0.3px;
+    margin: 0 0 10px;
+}
+
+.premium-contact .page-header p {
+    color: var(--white-color); /* Altera para branco para fundo escuro */
+    font-size: 1.05rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.contact-card {
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-color)); /* Usando primary-color */
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+
+.contact-card h3 {
+    font-size: 1.35rem;
+    margin: 0 0 6px;
+    color: var(--white-color); /* Branco para contraste */
+}
+
+.contact-sub {
+    color: var(--white-color);
+    margin-bottom: 18px;
+}
+
+.seal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    color: #f4e6b0;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    margin-bottom: 14px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 16px 0 22px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-item i {
+    color: var(--accent);
+    margin-top: 2px;
+    min-width: 18px;
+}
+
+.contact-item strong {
+    display: block;
+    font-weight: 700;
+}
+
+.contact-item a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--accent);
+}
+
+.contact-actions {
+    display: flex; /* Adicionado display flex para os botões */
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.premium-contact .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+    border: 0;
+}
+
+.btn-whats {
+    background: var(--whats);
+    color: #072e17;
+}
+
+.btn-whats:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.contact-map {
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    height: 100%;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.mini-foot {
+    margin-top: 20px;
+    font-size: 0.92rem;
+    color: #ffffff;
+}
+
+/* === CALCULADORA TRABALHISTA === */
+#calc-trabalhista.ct-card {
+    --ct-bg: #0b0f12;
+    --ct-surface: #11161b;
+    --ct-elev: #0f1419;
+    --ct-text: #e9eef3;
+    --ct-muted: #9fb0bf;
+    --ct-primary: #2bd27a;
+    --ct-primary-2: #16b96b;
+    --ct-ring: rgba(43, 210, 122, 0.45);
+    --ct-border: #1f2a33;
+    max-width: 460px;
+    margin: 24px auto;
+    color: var(--ct-text);
+    background: linear-gradient(180deg, #0b0f12, #0b0f12 60%, #0b0f12);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--ct-border);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+#calc-trabalhista .ct-header {
+    padding: 22px 22px 18px;
+    background: radial-gradient(120% 140% at 10% -20%, rgba(43, 210, 122, 0.2) 0%, transparent 55%),
+        radial-gradient(120% 140% at 110% -10%, rgba(22, 185, 107, 0.18) 0%, transparent 55%),
+        linear-gradient(180deg, #0f151a 0%, #0b0f12 100%);
+    border-bottom: 1px solid var(--ct-border);
+}
+
+#calc-trabalhista .ct-header h3 {
+    margin: 0 0 6px;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.2px;
+    color: #fff;
+}
+
+#calc-trabalhista .ct-header p {
+    margin: 0;
+    color: var(--ct-muted);
+    font-size: 0.92rem;
+}
+
+#calc-trabalhista .ct-body {
+    padding: 20px;
+}
+
+#calc-trabalhista .ct-label {
+    display: block;
+    margin: 12px 0 6px;
+    color: var(--ct-muted);
+    font-size: 0.9rem;
+}
+
+#calc-trabalhista .ct-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--ct-surface);
+    border: 1px solid var(--ct-border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    transition: border 0.2s, box-shadow 0.2s, transform 0.05s;
+}
+
+#calc-trabalhista .ct-input:focus-within {
+    border-color: #cb9531;
+    box-shadow: 0 0 0 6px rgba(203, 149, 49, 0.45);
+}
+
+#calc-trabalhista .ct-input input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--ct-text);
+    font-size: 1rem;
+    padding-left: 8px;
+}
+
+#calc-trabalhista .ct-icon {
+    opacity: 0.7;
+    font-family: "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+#calc-trabalhista .ct-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+#calc-trabalhista .ct-btn {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--ct-border);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.05s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+#calc-trabalhista .ct-btn:active {
+    transform: translateY(1px);
+}
+
+#calc-trabalhista .ct-primary {
+    background: linear-gradient(180deg, var(--ct-primary), var(--ct-primary-2));
+    color: #0b0f12;
+    border-color: transparent;
+}
+
+#calc-trabalhista .ct-primary:hover {
+    filter: brightness(1.05);
+}
+
+#calc-trabalhista .ct-ghost {
+    background: var(--ct-elev);
+    color: var(--ct-text);
+}
+
+#calc-trabalhista .ct-ghost:hover {
+    background: #151b21;
+}
+
+#calc-trabalhista .ct-result {
+    margin-top: 16px;
+    background: #0e1318;
+    border: 1px solid var(--ct-border);
+    border-radius: 14px;
+    padding: 14px 14px 10px;
+}
+
+#calc-trabalhista .ct-result.is-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 76px;
+    color: var(--ct-muted);
+}
+
+#calc-trabalhista .ct-result h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+}
+
+#calc-trabalhista .ct-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#calc-trabalhista .ct-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 6px;
+    border-bottom: 1px dashed #1d2830;
+    font-size: 0.98rem;
+}
+
+#calc-trabalhista .ct-list li:last-child {
+    border-bottom: 0;
+}
+
+#calc-trabalhista .ct-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 12px 8px;
+    border-top: 1px solid var(--ct-border);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+#calc-trabalhista .ct-note {
+    margin: 10px 4px 0;
+    color: var(--ct-muted);
+    font-size: 0.85rem;
+}
+
+/* === RESPONSIVIDADE - MOBILE === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Imagem de fundo específica para mobile */
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)),
+            url("https://imagedelivery.net/E_BFh2QU2I23Jq68Dk0FXw/876e4846-6c1e-4663-e8de-ed60a183f200/public");
+        background-position: center top;
+        padding: 0 16px;
+    }
+
+    /* Container com padding lateral */
+    .container {
+        padding: 0 10px !important;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Seções com padding lateral */
+    .section-padding {
+        padding: 3rem 10px;
+    }
+
+    /* Page headers */
+    .page-header {
+        padding: 0 10px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto 2rem;
+    }
+
+    /* === FAQ Accordion - Cards mais largos === */
+    .vk-accordion {
+        max-width: calc(100% - 20px); /* Mais largo */
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .vk-acc-item {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 14px;
+    }
+
+    .vk-acc-trigger {
+        color: #333333 !important;
+        text-decoration: none !important;
+        padding: 14px 48px 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .vk-acc-trigger:hover,
+    .vk-acc-trigger:focus,
+    .vk-acc-trigger:active {
+        color: #333333 !important;
+    }
+
+    .vk-acc-panel p {
+        color: #333333 !important;
+        font-size: 0.9rem;
+        margin: 12px 0 16px;
+    }
+
+    /* Calculadora */
+    #calc-trabalhista.ct-card {
+        max-width: calc(100% - 20px);
+        margin: 24px auto;
+    }
+
+    /* === CONTACT - Cards mais largos e mapa igual desktop === */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .contact-card {
+        max-width: calc(100% - 20px); /* Mais largo */
+        margin: 0 auto;
+    }
+
+    .contact-map {
+        max-width: calc(100% - 20px); /* Mais largo */
+        margin: 0 auto;
+        height: 400px; /* Altura fixa para o mapa mobile */
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .premium-contact {
+        padding: 40px 0;
+    }
+
+    .premium-contact .container {
+        padding: 0 5px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* === TELAS MUITO PEQUENAS === */
+@media (max-width: 420px) {
+    #calc-trabalhista.ct-card {
+        margin: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0 8px !important;
+    }
+
+    .section-padding {
+        padding: 2.5rem 8px;
+    }
+
+    .vk-accordion,
+    .service-card,
+    .about-grid,
+    .curiosity-block,
+    #calc-trabalhista.ct-card,
+    .contact-card,
+    .contact-map {
+        max-width: calc(100% - 16px);
+    }
+
+    .vk-acc-trigger {
+        padding: 14px 48px 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .vk-acc-panel p {
+        font-size: 0.9rem;
+        margin: 12px 0 16px;
+    }
+
+    .contact-map {
+        height: 350px; /* Altura menor para telas muito pequenas */
+    }
+}

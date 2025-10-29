@@ -1,0 +1,156 @@
+.header {
+    background: transparent; /* ALTERADO: Fundo transparente */
+    border-bottom: none; /* ALTERADO: Remove a borda */
+    position: absolute; /* ALTERADO: Posiciona o header flutuando sobre o conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0; /* Aumenta o padding para mais espaço vertical */
+    box-shadow: none; /* Garante que não há sombra inesperada */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 120px;
+    /* IMPORTANTE: Se o seu logo original for escuro, ele não aparecerá em um fundo escuro.
+       Este filtro o tornará branco. Se seu logo já for branco, remova esta linha. */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 2rem;
+}
+
+.main-nav ul li a {
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: var(--white-color); /* Links brancos para contraste com o fundo escuro do hero */
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white-color); /* Ícone branco para contraste com o fundo escuro do hero */
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+/* O estilo para .header-contact-btn foi mantido no CSS, mas o elemento HTML foi removido.
+   Isso não causa nenhum problema, mas pode ser removido do CSS para limpeza se desejar. */
+.header-contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f5f1e9; /* Cor de bege claro da imagem de referência */
+    color: var(--primary-color); /* Texto escuro no botão claro */
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px; /* Mais arredondado */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem; /* Espaçamento da navegação */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+.header-contact-btn i {
+    font-size: 1rem;
+}
+
+.header-contact-btn:hover {
+    background-color: #e0dacd; /* Bege ligeiramente mais escuro no hover */
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Menu hambúrguer */
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color); /* ALTERADO: Fundo escuro como o footer */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        z-index: 998;
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Borda consistente com fundo escuro */
+    }
+
+    .main-nav.active {
+        max-height: 300px; /* Ou ajuste para o conteúdo caber */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisor sutil */
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 1rem 2rem;
+        text-align: center;
+        border-bottom: none;
+        color: var(--white-color); /* Links brancos no menu mobile */
+    }
+
+    /* Ocultar o botão de contato do cabeçalho no mobile */
+    .header-contact-btn {
+        display: none; /* REMOVIDO: Oculta o botão de contato desktop */
+    }
+
+    /* Mostrar o link "Contato" dentro do menu mobile */
+    .mobile-nav-contact-link {
+        display: block;
+    }
+}

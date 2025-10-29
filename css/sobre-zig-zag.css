@@ -1,0 +1,193 @@
+#sobre-o-escritorio .page-header h2 {
+    transform: scale(1.2);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#sobre-o-escritorio .page-header.animate h2 {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#sobre-o-escritorio .page-header p {
+    transform: translateY(4rem);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#sobre-o-escritorio .page-header.animate p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.wrapper-text {
+    overflow: hidden;
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-grid > div:first-child {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.about-grid .container-img {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.about-grid img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transform: scale(1.2);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid > div:last-child {
+    flex: 1;
+}
+
+.about-grid h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    transform: translateY(100%);
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid.animate h3 {
+    transform: translateY(0);
+    transition: all 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid.animate p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid.animate img {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-grid.animate:nth-of-type(even) h3 {
+    transition-delay: 0.2s;
+}
+
+.about-grid.animate:nth-of-type(even) p {
+    transition-delay: 0.5s;
+}
+
+.about-grid.animate:nth-of-type(even) img {
+    transition-delay: 0.9s;
+}
+
+.about-grid.animate:nth-of-type(odd) h3 {
+    transition-delay: 0.5s;
+}
+
+.about-grid.animate:nth-of-type(odd) p {
+    transition-delay: 0.9s;
+}
+
+.about-grid.animate:nth-of-type(odd) img {
+    transition-delay: 0.2s;
+}
+
+.about-grid p strong {
+    color: var(--primary-color);
+}
+
+.about-grid:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 40px;
+        max-width: calc(100% - 20px); /* Mais largo */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-grid:nth-of-type(even) {
+        flex-direction: column;
+    }
+
+    .about-grid > div:first-child {
+        flex: none;
+        width: 100%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-grid > div:last-child {
+        flex: none;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .about-grid img {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+        margin: 0 auto;
+    }
+
+    .about-grid h3 {
+        font-size: 1.5em;
+    }
+
+    .about-grid p {
+        font-size: 1em;
+    }
+}
