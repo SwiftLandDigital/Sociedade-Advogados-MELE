@@ -31,6 +31,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="/css/loader.css" />
         <link rel="stylesheet" href="css/animations.css" />
         <link rel="stylesheet" href="css/buttons.css" />
         <link rel="stylesheet" href="css/header.css" />
@@ -41,6 +42,28 @@
         <link rel="stylesheet" href="css/footer.css" />
     </head>
     <body>
+        <div id="loader">
+            <div class="container-content">
+                <div class="container-left">
+                    <span class="wrapper">
+                        <span class="text sociedade"> Sociedade </span>
+                    </span>
+                    <span class="wrapper">
+                        <span class="text advogados"> Avogados </span>
+                    </span>
+                    <span class="wrapper">
+                        <span class="text mele"> Mele </span>
+                    </span>
+                </div>
+
+                <div class="container-right">
+                    <div class="container-img">
+                        <img src="/imagens/logo.mele.oficial.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 <header class="header">
@@ -66,6 +89,10 @@
                 <main>
                     <!-- A seção Hero agora tem um ID para ser o target do link "Home" -->
                     <section id="hero-section" class="hero">
+                        <div class="container-bg">
+                            <img src="/imagens/capa.png" alt="" data-speed="0.8" />
+                        </div>
+
                         <div class="hero-content">
                             <h1 data-aos="">Sociedade Advogados MELE</h1>
                             <p data-aos="" class="subtitle">
@@ -770,6 +797,7 @@
         <script src="./js/gsap/ScrollTrigger.min.js"></script>
         <script src="./js/gsap/ScrollSmoother.min.js"></script>
         <script src="./js/main.js"></script>
+        <script type="module" src="./js/main.js"></script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {

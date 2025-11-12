@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
     padding: 1.5rem 0; /* Aumenta o padding para mais espaço vertical */
     box-shadow: none; /* Garante que não há sombra inesperada */
 }

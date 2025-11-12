@@ -1,6 +1,4 @@
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55)),
-        url("https://imagedelivery.net/E_BFh2QU2I23Jq68Dk0FXw/876e4846-6c1e-4663-e8de-ed60a183f200/public");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,6 +9,36 @@
     text-align: center;
     color: var(--white-color);
     padding: 0 2rem;
+    position: relative;
+}
+
+.hero .container-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hero .container-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55));
+}
+
+.hero .container-bg img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-content {

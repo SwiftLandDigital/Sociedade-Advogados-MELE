@@ -1,0 +1,179 @@
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    pointer-events: none;
+}
+
+#loader .container-content {
+    display: flex;
+    position: relative;
+    left: 70px;
+}
+
+#loader .container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#loader .container-left .wrapper {
+    font-size: 64px;
+    letter-spacing: +0.04em;
+    line-height: 1.1em;
+    overflow: hidden;
+}
+
+#loader .container-left .wrapper .text {
+    display: block;
+    transform: translateY(100%);
+    transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+#loader .container-left .wrapper .text.advogados {
+    font-size: 68px;
+    letter-spacing: +0.05em;
+    line-height: 1.1em;
+}
+
+#loader .container-left {
+    position: relative;
+    padding-right: 100px;
+}
+
+#loader .container-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+}
+
+#loader .container-left .wrapper .text.mele {
+    font-size: 136px;
+    letter-spacing: +0.06em;
+    line-height: 1em;
+}
+
+#loader .container-right .container-img {
+    width: 516px;
+    height: auto;
+    aspect-ratio: 265 / 232;
+    position: relative;
+    overflow: hidden;
+}
+
+#loader .container-right .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateX(-100%);
+    transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s,
+        opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1) 1.4s;
+    opacity: 0;
+}
+
+#loader.starting-loading .container-left::before {
+    transform: scaleY(1);
+}
+
+#loader.ending-loading .container-left::before {
+    transform: scale(0);
+    transition-delay: 1.8s;
+}
+
+#loader.closing-loader .container-left::before {
+    transform: scale(0);
+}
+
+#loader.starting-loading .wrapper .text {
+    transform: translateY(0);
+}
+
+#loader.starting-loading .wrapper:nth-child(1) .text {
+    transition-delay: 0.4s;
+}
+
+#loader.starting-loading .wrapper:nth-child(2) .text {
+    transition-delay: 0.6s;
+}
+
+#loader.starting-loading .wrapper:nth-child(3) .text {
+    transition-delay: 0.8s;
+}
+
+#loader.ending-loading .wrapper .text {
+    transform: translateY(-120%);
+}
+
+#loader.ending-loading .wrapper:nth-child(1) .text {
+    transition-delay: 0.4s;
+}
+
+#loader.ending-loading .wrapper:nth-child(2) .text {
+    transition-delay: 0.6s;
+}
+
+#loader.ending-loading .wrapper:nth-child(3) .text {
+    transition-delay: 0.8s;
+}
+
+#loader.closing-loader .wrapper .text {
+    transform: translateY(-120%);
+}
+
+#loader.starting-loading .container-right .container-img img {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+#loader.ending-loading .container-right .container-img img {
+    transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s,
+        opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1) 1.4s;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#loader.closing-loader .container-right .container-img img {
+    transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s,
+        opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1) 1.4s;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#loader.loaded {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#loader.loaded .wrapper .text {
+    transform: translateY(-120%);
+}
+
+#loader.loaded .container-left::before {
+    transform: scale(0);
+}
+
+#loader.loaded .container-right .container-img img {
+    transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s,
+        opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1) 1.4s;
+    transform: translateX(-100%);
+    opacity: 0;
+}
