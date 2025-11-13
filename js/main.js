@@ -7,16 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
         // Cria a instância do ScrollSmoother
-        const smoother = ScrollSmoother.create({
-            wrapper: "#smooth-wrapper",
-            content: "#smooth-content",
-            smooth: 1.8,
-            effects: true,
-            normalizeScroll: true,
-            speed: 0.8,
-            smoothTouch: 0.1,
-            ignoreMobileResize: true,
-        });
+        if (window.innerWidth > 1024) {
+            const smoother = ScrollSmoother.create({
+                wrapper: "#smooth-wrapper",
+                content: "#smooth-content",
+                smooth: 1.8,
+                effects: true,
+                normalizeScroll: true,
+                speed: 0.8,
+                smoothTouch: 0.1,
+                ignoreMobileResize: true,
+            });
+        }
 
         // CONSTRUIR OS OBSERVERS
         const elementsToAnimate = document.querySelectorAll("[data-aos]");
